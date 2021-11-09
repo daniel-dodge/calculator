@@ -12,21 +12,34 @@ reader.question("What would you like to calculate?", function(input){
     mathSymbol = tokens[0];
     num1 = Number(tokens[1]);
     num2 = Number(tokens[2]);
-
+    num3 = Number(tokens[3]);
     console.log('mathSymbol', mathSymbol);
     console.log('num1', num1);
-    console.log('num2', num2);
+    console.log('num2', num2);  
+    console.log('num3', num3);
     if (mathSymbol === "+") {
-        console.log(num1 + num2);}
+        console.log(num1 + num2 + num3);}
     if (mathSymbol === "-") {
-        console.log(num1 - num2);}
+        console.log(num1 - num2 - num3);}
     if (mathSymbol === "*") {
-        console.log(num1 * num2);}
+        console.log(num1 * num2 * num3);}
     if (mathSymbol === "/") {
-       console.log(num1 / num2);
+       console.log(num1 / num2 / num3);
     }
     if (mathSymbol === "sqrt") {
         console.log(Math.sqrt(num1));
+     }
+    if (mathSymbol === "square") {
+        console.log(Math.pow(num1,2));
+     }
+    if (mathSymbol === "cube") {
+        console.log(Math.pow(num1,3));
+     }
+    if (mathSymbol === "power") {
+        console.log(Math.pow(num1,num2));
+     }
+    if (mathSymbol === "%") {
+        console.log(num1 % num2);
      }
     reader.close()
 
